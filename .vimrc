@@ -9,7 +9,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'avakhov/vim-yaml'
+Plugin 'scrooloose/nerdtree'
+Plugin 'itchyny/lightline.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'Xuyuanp/nerdtree-git-plugin.git'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,10 +30,15 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"Plugin Settings
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 "Vimrc file
 
 "Background
 set bg=dark
+set t_Co=256
 
 "Set line numbers
 set number
@@ -49,4 +58,5 @@ set smartcase
 "Backup Settings
 set backup
 
-
+"Show commands being written
+set showcmd
