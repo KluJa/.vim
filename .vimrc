@@ -13,8 +13,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Xuyuanp/nerdtree-git-plugin.git'
-Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
