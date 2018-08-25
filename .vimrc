@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.custom_config/vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -60,3 +60,20 @@ set backup
 
 "Show commands being written
 set showcmd
+
+"NERDtree Settings
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = 'V'
+
+"Git Plugin Settings
+let g:NERDTreeIndicatorMapCustom = {
+	\ "Modified" : "MOD",
+	\ "Staged" : "STA",
+	\ "Untracked" : "UNT",
+	\ "Renamed" : "RE",
+	\ "Unmerged" : "UNM",
+	\ "Deleted" : "DEL",
+	\ "Dirty" : "DTY",
+	\ "Clean" : "CLN",
+	\ "Ignored" : "IGN",
+	\ "Unknown" : "?",}
