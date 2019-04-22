@@ -9,10 +9,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'Xuyuanp/nerdtree-git-plugin.git'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/Youcompleteme'
 
@@ -33,7 +31,6 @@ filetype plugin indent on    " required
 
 "Plugin Settings
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Vimrc file
 
@@ -78,3 +75,5 @@ let g:NERDTreeIndicatorMapCustom = {
 	\ "Clean" : "CLN",
 	\ "Ignored" : "IGN",
 	\ "Unknown" : "?",}
+
+"External files"
