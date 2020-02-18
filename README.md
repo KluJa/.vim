@@ -6,3 +6,4 @@ After cloning run:
 This installs Vundle
 
 After installing Vundle run vim and inside vim run :PluginInstall
+In home folder, create symbolic link to .vim/.vimrc file
