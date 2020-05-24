@@ -1,23 +1,13 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+"Plugin Manager Settings block
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'itchyny/lightline.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'Xuyuanp/nerdtree-git-plugin.git'
-Plugin 'fatih/vim-go'
-Plugin 'Valloric/Youcompleteme'
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+"End of Plugin Manager settings:w
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -33,7 +23,6 @@ filetype plugin indent on    " required
 
 "Plugin Settings
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Vimrc file
 
@@ -62,19 +51,3 @@ set backup
 "Show commands being written
 set showcmd
 
-"NERDtree Settings
-let g:NERDTreeDirArrowExpandable = '>'
-let g:NERDTreeDirArrowCollapsible = 'V'
-
-"Git Plugin Settings
-let g:NERDTreeIndicatorMapCustom = {
-	\ "Modified" : "MOD",
-	\ "Staged" : "STA",
-	\ "Untracked" : "UNT",
-	\ "Renamed" : "RE",
-	\ "Unmerged" : "UNM",
-	\ "Deleted" : "DEL",
-	\ "Dirty" : "DTY",
-	\ "Clean" : "CLN",
-	\ "Ignored" : "IGN",
-	\ "Unknown" : "?",}
